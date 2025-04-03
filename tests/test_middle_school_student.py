@@ -5,6 +5,11 @@ def test_new_valid_middle_school_student_gets_transportation():
     name = "Ellis"
     grade = "junior"
     classes = ["Painting"]
+def test_new_valid_middle_school_student_gets_transportation():
+    # Arrange
+    name = "Ellis"
+    grade = "junior"
+    classes = ["Painting"]
 
     # Act
     ellis = MiddleSchoolStudent(name, grade, classes, gets_transportation=True)
