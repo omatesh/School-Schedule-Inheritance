@@ -3,6 +3,8 @@ from .student import Student
 class MiddleSchoolStudent(Student):
     def __init__(self, name, grade, classes, gets_transportation = False):
         super().__init__(name, grade, classes)
+        if not isinstance(gets_transportation, bool):
+            raise AssertionError("You've done a mistake")
         self.gets_transportation = gets_transportation
 
     def transportation_message(self):

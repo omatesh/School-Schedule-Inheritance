@@ -1,3 +1,4 @@
+import pytest
 from school_schedule.middle_school_student import MiddleSchoolStudent
 
 def test_new_valid_middle_school_student_gets_transportation():
@@ -107,8 +108,6 @@ def test_middle_school_student_summary_nonbulean_transportation():
     grade = "junior"
     classes = ["Painting"]
 
-    # Act
-    ellis = MiddleSchoolStudent(name, grade, classes, gets_transportation="yes")
-
-    assert isinstance(ellis.gets_transportation, bool)
-
+    # assert isinstance(ellis.gets_transportation, bool)
+    with pytest.raises(AssertionError):
+        ellis = MiddleSchoolStudent(name, grade, classes, gets_transportation="yes")
